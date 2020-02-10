@@ -1,0 +1,73 @@
+{
+  "name": "@fatesigner/eslint-config",
+  "version": "0.0.0",
+  "description": "ESLint Config for JavaScript Style with.",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config"
+  ],
+  "author": {
+    "name": "Jeremy Tang",
+    "email": "fatesigner@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatesigner/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fatesigner/eslint-config/issues"
+  },
+  "homepage": "https://github.com/fatesigner/eslint-config#readme",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "clean": "gulp clean --gulpfile build/gulpfile.js",
+    "build": "gulp build --gulpfile build/gulpfile.js",
+    "release": "semantic-release",
+    "commit": "npx git cz",
+    "lint": "lint-staged"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "2.19.0",
+    "@typescript-eslint/parser": "2.19.0",
+    "@vue/eslint-config-prettier": "6.0.0",
+    "@vue/eslint-config-standard": "5.1.1",
+    "@vue/eslint-config-typescript": "5.0.1",
+    "babel-eslint": "10.0.3",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-html": "6.0.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-node": "11.0.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "eslint-plugin-vue": "6.1.2",
+    "prettier": "1.19.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "@fatesigner/cz-customizable": "6.3.0",
+    "@semantic-release/changelog": "5.0.0",
+    "@semantic-release/git": "9.0.0",
+    "@types/gulp": "4.0.6",
+    "@types/node": "13.7.0",
+    "commitizen": "4.0.3",
+    "cz-customizable": "6.2.0",
+    "gulp": "4.0.2",
+    "husky": "4.2.1",
+    "lint-staged": "10.0.7",
+    "require-dir": "1.2.0",
+    "rimraf": "3.0.2",
+    "semantic-release": "17.0.2",
+    "travis": "0.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@fatesigner/cz-customizable"
+    }
+  }
+}
