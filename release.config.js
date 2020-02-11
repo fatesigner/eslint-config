@@ -49,14 +49,6 @@ module.exports = {
       }
     ],
     [
-      '@semantic-release/npm',
-      {
-        npmPublish: true,
-        pkgRoot: 'dist',
-        allowSameVersion: true
-      }
-    ],
-    [
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
@@ -68,6 +60,14 @@ module.exports = {
       '@semantic-release/github',
       {
         // assets: 'dist/!*.tgz'
+      }
+    ],
+    [
+      '@semantic-release/npm',
+      {
+        npmPublish: true,
+        pkgRoot: 'dist',
+        allowSameVersion: true
       }
     ]
   ]

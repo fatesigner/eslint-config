@@ -2,6 +2,7 @@
 
 [![build][travis-image]][travis-url]
 [![commitizen][commitizen-image]][commitizen-url]
+[![prettier][prettier-image]][prettier-url]
 [![download][download-image]][download-url]
 [![npm][npm-image]][npm-url]
 [![semantic][semantic-image]][semantic-url]
@@ -14,6 +15,8 @@
 [download-url]: https://npmjs.org/package/fatesigner/eslint-config
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-green.svg
 [commitizen-url]: http://commitizen.github.io/cz-cli/
+[prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?logo=prettier
+[prettier-url]: https://github.com/prettier/prettier
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
 [semantic-url]: https://opensource.org/licenses/MIT
 

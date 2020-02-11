@@ -1,5 +1,4 @@
-# IDE - Webstorm
-*.idea
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # release
 release.md
@@ -7,6 +6,14 @@ release.md
 
 # dependencies
 /node_modules
+
+# test output
+/.nyc_output
+/coverage
+/mochawesome-report
+/test/**/dist
+coverage.lcov
+.npmpublish.md
 
 # compiled output
 /dist
@@ -19,7 +26,21 @@ release.md
 .cache-loader
 
 # compiled cache
+.sass-cache
+.eslintcache
 .stylelintcache
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - Webstorm
+*.idea
 
 # IDE - VSCode
 .vscode/*
@@ -27,6 +48,27 @@ release.md
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.vs/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Pp]ackages/
+*.user
+*.pch
+*.tlh
+*.tli
+*.pdb
+*.suo
+*.lastbuildstate
+*.Build.CppClean.log
+*.ipch
+*.history
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
 
 # Windows:
 [Tt]humbs.db

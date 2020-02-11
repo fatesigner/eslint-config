@@ -32,7 +32,14 @@ module.exports = {
   },
   plugins: ['html', 'standard', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        usePrettierrc: false,
+        singleQuote: true,
+        withNodeModules: true
+      }
+    ],
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // 在命名变量时，样式指南通常属于两个阵营之一：camelcase（variableName）和underscores（variable_name）。此规则侧重于使用camelcase方法。如果您的样式指南要求camelCasing您的变量名称，那么此规则适合您！
@@ -79,6 +86,7 @@ module.exports = {
     // 禁止使用 console
     // @off console 的使用很常见
     'no-console': 'off',
+    'no-unused-expressions': 'off',
     // 禁止将常量作为 if, for, while 里的测试条件，比如 if (true), for (;;)，除非循环内部有 break 语句
     'no-constant-condition': [
       'error',
