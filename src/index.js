@@ -11,8 +11,7 @@ module.exports = {
     node: true,
     es6: true
   },
-  // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: ['standard', 'plugin:prettier/recommended'],
+  extends: ['standard', 'prettier'],
   parser: 'babel-eslint',
   parserOptions: {
     allowImportExportEverywhere: false,
@@ -32,17 +31,11 @@ module.exports = {
   },
   plugins: ['html', 'standard', 'prettier'],
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        usePrettierrc: false,
-        singleQuote: true,
-        withNodeModules: true
-      }
-    ],
+    // 'prettier/prettier': ['error'],
     // allow paren-less arrow functions
     'arrow-parens': 0,
-    // 在命名变量时，样式指南通常属于两个阵营之一：camelcase（variableName）和underscores（variable_name）。此规则侧重于使用camelcase方法。如果您的样式指南要求camelCasing您的变量名称，那么此规则适合您！
+    // 在命名变量时，样式指南通常属于两个阵营之一：camelcase（variableName）和underscores（variable_name）。
+    // 此规则侧重于使用camelcase方法。如果您的样式指南要求camelCasing您的变量名称，那么此规则适合您！
     camelcase: 0,
     // 要求或禁止使用尾随逗号
     'comma-dangle': [
@@ -72,6 +65,7 @@ module.exports = {
     'handle-callback-err': 0,
     // 强制执行一致的缩进（缩进）
     // indent: ['error', 2, { SwitchCase: 1 }],
+    indent: 'off',
     'no-tabs': 'off',
     quotes: ['error', 'single'],
     // 对象字面量中的属性名是否强制双引号
@@ -103,6 +97,8 @@ module.exports = {
     'no-dupe-args': 'error',
     // 禁止在对象字面量中出现重复名称的键名
     'no-dupe-keys': 'error',
+    // 禁止出现多个空格
+    'no-multi-spaces': ['error', { ignoreEOLComments: false }],
     // 禁止 new 对象（非新）
     'no-new': 0,
     // 禁止 new Function（非新）
@@ -144,8 +140,8 @@ module.exports = {
         args: 'none'
       }
     ],
-    // 关闭语句强制分号结尾
-    semi: [0],
+    // 语句强制分号结尾
+    semi: ['error', 'always'],
     // 格式化函数时，函数名称或function关键字与开头表达式之间允许有空格
     'space-before-function-paren': [
       'error',
@@ -156,10 +152,7 @@ module.exports = {
       }
     ],
     // 在块之前需要或不允许空间（空格 - 块之前）
-    'space-before-blocks': [
-      'error',
-      { functions: 'always', keywords: 'always', classes: 'always' }
-    ],
+    'space-before-blocks': ['error', { functions: 'always', keywords: 'always', classes: 'always' }],
     // 要求块语句以空行开头和结尾
     'padded-blocks': 0,
     // 空行最多不能超过100行

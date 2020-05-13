@@ -18,7 +18,7 @@ module.exports = {
   bracketSpacing: true,
   // 代码的解析引擎，默认为babylon，与babel相同。
   //parser: 'babylon',
-  parser: 'typescript',
+  //parser: 'typescript',
   // 结尾是 \n \r \n\r auto
   endOfLine: 'auto'
 };
