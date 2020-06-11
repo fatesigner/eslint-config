@@ -1,17 +1,11 @@
 const czConfig = require('./.cz-config');
 
-const types = czConfig.types.map(x => x.value);
+const types = czConfig.types.map((x) => x.value);
 
 module.exports = {
-  extends: [
-    "@commitlint/config-conventional"
-  ],
+  extends: ['@commitlint/config-conventional'],
   rules: {
-    'type-enum': [
-      2,
-      'always',
-      types
-    ],
+    'type-enum': [2, 'always', types],
     'subject-empty': [0],
     'type-case': [0],
     'type-empty': [0],

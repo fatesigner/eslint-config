@@ -11,10 +11,10 @@ const releaseRules = [
   { type: 'chore', release: null }
 ];
 
-const releaseRulesArray = releaseRules.map(x => x.type);
+const releaseRulesArray = releaseRules.map((x) => x.type);
 
 // 对于没有定义在releaseRules里的type 默认设置其发布版本为 patch
-czConfig.types.forEach(x => {
+czConfig.types.forEach((x) => {
   if (releaseRulesArray.indexOf(x.value) < 0) {
     releaseRules.push({
       type: x.value,
@@ -45,15 +45,14 @@ module.exports = {
     [
       '@semantic-release/changelog',
       {
-        changelogFile: 'CHANGELOG.md'
+        changelogFile: 'docs/CHANGELOG.md'
       }
     ],
     [
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md', 'package.json', 'package-lock.json'],
-        message:
-          'chore(🤖):${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
+        message: 'chore(🤖):${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'
       }
     ],
     [

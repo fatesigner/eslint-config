@@ -31,7 +31,16 @@ module.exports = {
   },
   plugins: ['html', 'standard', 'prettier'],
   rules: {
-    // 'prettier/prettier': ['error'],
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'none',
+        bracketSpacing: true,
+        jsxBracketSameLine: true,
+        parser: 'flow'
+      }
+    ],
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // 在命名变量时，样式指南通常属于两个阵营之一：camelcase（variableName）和underscores（variable_name）。
@@ -98,7 +107,12 @@ module.exports = {
     // 禁止在对象字面量中出现重复名称的键名
     'no-dupe-keys': 'error',
     // 禁止出现多个空格
-    'no-multi-spaces': ['error', { ignoreEOLComments: false }],
+    'no-multi-spaces': [
+      'error',
+      {
+        ignoreEOLComments: false
+      }
+    ],
     // 禁止 new 对象（非新）
     'no-new': 0,
     // 禁止 new Function（非新）
@@ -152,11 +166,23 @@ module.exports = {
       }
     ],
     // 在块之前需要或不允许空间（空格 - 块之前）
-    'space-before-blocks': ['error', { functions: 'always', keywords: 'always', classes: 'always' }],
+    'space-before-blocks': [
+      'error',
+      {
+        functions: 'always',
+        keywords: 'always',
+        classes: 'always'
+      }
+    ],
     // 要求块语句以空行开头和结尾
     'padded-blocks': 0,
     // 空行最多不能超过100行
-    'no-multiple-empty-lines': [0, { max: 100 }],
+    'no-multiple-empty-lines': [
+      0,
+      {
+        max: 100
+      }
+    ],
     // 关闭禁止混用tab和空格
     'no-mixed-spaces-and-tabs': [0]
   }

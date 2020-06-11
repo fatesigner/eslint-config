@@ -40,14 +40,27 @@ module.exports = {
 ## 添加对ts和vue文件的规则支持
 添加以下代码到 `.eslintrc.js`
 ```javascript
+// 如果您的项目使用 typescript，添加 ts 配置
 const tslint = require('@fatesigner/eslint-config/ts');
-const vuelint = require('@fatesigner/eslint-config/vue');
+// const vueJSlint = require('@fatesigner/eslint-config/vue-js');
+// 如果您的项目使用 vue+typescript，推荐使用 vue-ts 配置
+const vueTSlint = require('@fatesigner/eslint-config/vue-ts');
 
 module.exports = {
-  "extends": "@fatesigner/eslint-config",
-  "overrides": [
+  extends: '@fatesigner/eslint-config',
+  overrides: [
     tslint,
-    vuelint
+    // vueJSlint,
+    vueTSlint
   ]
+}
+```
+
+## 或者可以在您的项目中使用此插件针对 [prettier](https://github.com/prettier/prettier) 的部分配置
+添加以下代码到 `package.json`
+```javascript
+{ 
+  ...
+  "prettier": "@fatesigner/eslint-config/.prettierrc"
 }
 ```
