@@ -8,26 +8,28 @@ module.exports = {
   root: true,
   env: {
     browser: true,
+    commonjs: true,
     node: true,
     es6: true
   },
   extends: ['standard', 'prettier'],
-  parser: 'babel-eslint',
+  globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     allowImportExportEverywhere: false,
-    ecmaVersion: 2017,
-    // 设置'script'（默认）或'module'如果你的代码是在ECMAScript中的模块。
-    sourceType: 'module',
     ecmaFeatures: {
-      globalReturn: false,
-      jsx: true,
-      legacy: true,
-      modules: true,
-      legacyDecorators: true,
       decoratorsBeforeExport: true,
-      experimentalObjectRestSpread: true
+      experimentalObjectRestSpread: true,
+      globalReturn: false,
+      legacy: true,
+      legacyDecorators: true,
+      jsx: true,
+      modules: true
     },
-    parser: 'babel-eslint'
+    ecmaVersion: 2018,
+    parser: '@typescript-eslint/parser',
+    // 设置'script'（默认）或'module'如果你的代码是在ECMAScript中的模块。
+    sourceType: 'module'
   },
   plugins: ['html', 'standard', 'prettier'],
   rules: {
@@ -37,8 +39,7 @@ module.exports = {
         singleQuote: true,
         trailingComma: 'none',
         bracketSpacing: true,
-        jsxBracketSameLine: true,
-        parser: 'flow'
+        jsxBracketSameLine: true
       }
     ],
     // allow paren-less arrow functions
