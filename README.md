@@ -8,11 +8,11 @@
 [![semantic][semantic-image]][semantic-url]
              
 [npm-image]: https://img.shields.io/npm/v/@fatesigner/eslint-config.svg?color=blue&logo=npm
-[npm-url]: https://npmjs.org/package/fatesigner/eslint-config
-[travis-image]: https://travis-ci.com/fatesigner/eslint-config.svg?color=green&token=i21P7stb8bZPNjZakvsi&branch=master
+[npm-url]: https://npmjs.org/package/@fatesigner/eslint-config
+[travis-image]: https://travis-ci.com/fatesigner/eslint-config.svg?branch=master
 [travis-url]: https://travis-ci.com/fatesigner/eslint-config
 [download-image]: https://img.shields.io/npm/dw/@fatesigner/eslint-config.svg?color=yellowgreen
-[download-url]: https://npmjs.org/package/fatesigner/eslint-config
+[download-url]: https://npmjs.org/package/@fatesigner/eslint-config
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-green.svg
 [commitizen-url]: http://commitizen.github.io/cz-cli/
 [prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?logo=prettier
