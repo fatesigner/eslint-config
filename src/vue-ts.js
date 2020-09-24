@@ -4,6 +4,7 @@
  */
 
 const eslint = require('./');
+const tslint = require('./ts');
 
 module.exports = {
   files: ['**/*.vue'],
@@ -13,12 +14,10 @@ module.exports = {
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaFeatures: { jsx: true },
-    ecmaVersion: 2017,
+    ecmaVersion: 2019,
     sourceType: 'module',
     parser: '@typescript-eslint/parser'
   },
   plugins: ['vue', '@typescript-eslint'],
-  rules: {
-    'prettier/prettier': ['error']
-  }
+  rules: tslint.rules
 };

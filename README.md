@@ -24,7 +24,12 @@ eslint插件配置，包含js、ts、vue通用规则
 
 **基于 [eslint-config-standard](https://github.com/standard/eslint-config-standard).**
 
-## Install
+## 依赖（peerDependencies）
+```bash
+npm i eslint prettier typescript -D
+```
+
+## 安装
 ```bash
 npm i @fatesigner/eslint-config -D
 ```
@@ -33,7 +38,7 @@ npm i @fatesigner/eslint-config -D
 添加以下代码到 `.eslintrc.js`
 ```javascript
 module.exports = {
-  "extends": "@fatesigner/eslint-config"
+  extends: '@fatesigner/eslint-config'
 }
 ```
 
