@@ -30,7 +30,7 @@ npm i @fatesigner/eslint-config -D
 
 // install peerDependencies
 npm i eslint prettier -D
-npm i @babel/eslint-parser @babel/core @babel/preset-env -D
+npm i @babel/eslint-parser @babel/core @babel/preset-env @babel/preset-react -D
 npm i @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
 ```
 
