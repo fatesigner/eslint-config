@@ -5,7 +5,8 @@
   "license": "MIT",
   "keywords": [
     "eslint",
-    "config"
+    "config",
+    "vue"
   ],
   "author": {
     "name": "Jeremy Tang",
@@ -19,8 +20,8 @@
     "url": "https://github.com/fatesigner/eslint-config/issues"
   },
   "homepage": "https://github.com/fatesigner/eslint-config#readme",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "js.js",
+  "module": "js.js",
   "scripts": {
     "clean": "gulp clean --gulpfile build/gulpfile.js",
     "build": "gulp build --gulpfile build/gulpfile.js",
@@ -28,45 +29,54 @@
     "commit": "npx git cz",
     "lint": "lint-staged"
   },
-  "peerDependencies": {
-    "eslint": "^5.0.0 || ^6.0.0 || ^7.0.0",
-    "prettier": "^2.0.0",
-    "typescript": "^3.0.0 || ^4.0.0"
-  },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.2.0",
-    "@typescript-eslint/parser": "4.2.0",
-    "babel-eslint": "10.1.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-config-standard": "14.1.1",
-    "eslint-plugin-html": "6.1.0",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.0.1",
-    "eslint-plugin-vue": "6.2.2"
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^7.9.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "7.x",
+    "@babel/eslint-parser": "7.x",
+    "@babel/preset-env": "7.x",
+    "@typescript-eslint/eslint-plugin": "4.x",
+    "@typescript-eslint/parser": "4.x",
+    "eslint": "7.x",
+    "prettier": "2.x"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.3.5",
-    "@commitlint/config-conventional": "8.3.4",
+    "@babel/core": "7.14.3",
+    "@babel/eslint-parser": "7.14.3",
+    "@babel/preset-env": "7.14.2",
+    "@babel/preset-react": "^7.13.13",
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
     "@fatesigner/cz-customizable": "6.3.0",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
-    "@types/gulp": "4.0.6",
-    "@types/node": "14.11.2",
-    "commitizen": "4.2.1",
+    "@types/gulp": "4.0.8",
+    "@types/node": "15.6.1",
+    "@typescript-eslint/eslint-plugin": "4.25.0",
+    "@typescript-eslint/parser": "4.25.0",
+    "commitizen": "4.2.4",
     "cz-customizable": "6.3.0",
-    "eslint": "6.8.0",
+    "eslint": "7.27.0",
     "gulp": "4.0.2",
-    "husky": "4.3.0",
-    "lint-staged": "10.4.0",
-    "prettier": "2.1.2",
+    "husky": "6.0.0",
+    "lint-staged": "11.0.0",
+    "prettier": "2.3.0",
     "require-dir": "1.2.0",
     "rimraf": "3.0.2",
-    "semantic-release": "17.1.2",
+    "semantic-release": "17.4.3",
     "travis": "0.1.1",
-    "typescript": "3.9.7"
+    "typescript": "4.2.4",
+    "vue": "2.6.12",
+    "vue-property-decorator": "9.1.2"
   },
   "config": {
     "commitizen": {

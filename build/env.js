@@ -1,5 +1,5 @@
 /**
- * global
+ * env
  */
 
 const Path = require('path');

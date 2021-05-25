@@ -6,13 +6,13 @@
 [![download][download-image]][download-url]
 [![npm][npm-image]][npm-url]
 [![semantic][semantic-image]][semantic-url]
-             
+
 [npm-image]: https://img.shields.io/npm/v/@fatesigner/eslint-config.svg?color=blue&logo=npm
-[npm-url]: https://npmjs.org/package/@fatesigner/eslint-config
-[travis-image]: https://travis-ci.com/fatesigner/eslint-config.svg?branch=master
+[npm-url]: https://npmjs.com/package/@fatesigner/eslint-config
+[travis-image]: https://travis-ci.com/fatesigner/eslint-config.svg?color=green&token=i21P7stb8bZPNjZakvsi&branch=master
 [travis-url]: https://travis-ci.com/fatesigner/eslint-config
 [download-image]: https://img.shields.io/npm/dw/@fatesigner/eslint-config.svg?color=yellowgreen
-[download-url]: https://npmjs.org/package/@fatesigner/eslint-config
+[download-url]: https://npmjs.com/package/@fatesigner/eslint-config
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-green.svg
 [commitizen-url]: http://commitizen.github.io/cz-cli/
 [prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?logo=prettier
@@ -24,41 +24,43 @@ eslint插件配置，包含js、ts、vue通用规则
 
 **基于 [eslint-config-standard](https://github.com/standard/eslint-config-standard).**
 
-## 依赖（peerDependencies）
-```bash
-npm i eslint prettier typescript -D
-```
-
-## 安装
+## Install
 ```bash
 npm i @fatesigner/eslint-config -D
+
+// install peerDependencies
+npm i eslint prettier -D
+npm i @babel/eslint-parser @babel/core @babel/preset-env -D
+npm i @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
 ```
 
 ## 使用
 添加以下代码到 `.eslintrc.js`
 ```javascript
+const eslint = require('@fatesigner/eslint-config');
+
 module.exports = {
-  extends: '@fatesigner/eslint-config'
+  root: true,
+  overrides: [eslint]
 }
 ```
 
-## 添加对ts和vue文件的规则支持
+## 添加对 ts 和 vue 类型文件的规则支持
 添加以下代码到 `.eslintrc.js`
 ```javascript
-// 如果您的项目使用 typescript，添加 ts 配置
+// javascript
+const eslint = require('@fatesigner/eslint-config');
+
+// typescript
 const tslint = require('@fatesigner/eslint-config/ts');
-// const vueJSlint = require('@fatesigner/eslint-config/vue-js');
-// 如果您的项目使用 vue+typescript，推荐使用 vue-ts 配置
-const vueTSlint = require('@fatesigner/eslint-config/vue-ts');
+
+// vue
+const vuelint = require('@fatesigner/eslint-config/vue');
 
 module.exports = {
-  extends: '@fatesigner/eslint-config',
-  overrides: [
-    tslint,
-    // vueJSlint,
-    vueTSlint
-  ]
-}
+  root: true,
+  overrides: [eslint, tslint, vuelint]
+};
 ```
 
 ## 或者可以在您的项目中使用此插件针对 [prettier](https://github.com/prettier/prettier) 的部分配置

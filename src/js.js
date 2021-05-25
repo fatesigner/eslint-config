@@ -1,11 +1,9 @@
 ﻿/**
- * eslint
- * for js
+ * Eslint for js
  */
 
 module.exports = {
-  // 以当前目录为根目录，不再向上查找 .eslintrc.js
-  root: true,
+  files: ['**/*.js', '**/*.jsx'],
   env: {
     browser: true,
     commonjs: true,
@@ -14,9 +12,12 @@ module.exports = {
   },
   extends: ['standard', 'prettier'],
   globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
-  parser: '@typescript-eslint/parser',
+  plugins: ['html', 'standard', 'prettier'],
+  parser: '@babel/eslint-parser',
   parserOptions: {
+    sourceType: 'module',
     allowImportExportEverywhere: false,
+    ecmaVersion: 12,
     ecmaFeatures: {
       decoratorsBeforeExport: true,
       experimentalObjectRestSpread: true,
@@ -26,12 +27,11 @@ module.exports = {
       jsx: true,
       modules: true
     },
-    ecmaVersion: 2018,
-    parser: '@typescript-eslint/parser',
-    // 设置'script'（默认）或'module'如果你的代码是在ECMAScript中的模块。
-    sourceType: 'module'
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-env', '@babel/preset-react']
+    }
   },
-  plugins: ['html', 'standard', 'prettier'],
   rules: {
     'prettier/prettier': [
       'error',
@@ -43,10 +43,10 @@ module.exports = {
       }
     ],
     // allow paren-less arrow functions
-    'arrow-parens': 0,
+    'arrow-parens': 'off',
     // 在命名变量时，样式指南通常属于两个阵营之一：camelcase（variableName）和underscores（variable_name）。
     // 此规则侧重于使用camelcase方法。如果您的样式指南要求camelCasing您的变量名称，那么此规则适合您！
-    camelcase: 0,
+    camelcase: 'off',
     // 要求或禁止使用尾随逗号
     'comma-dangle': [
       'error',
@@ -59,7 +59,7 @@ module.exports = {
       }
     ],
     // 要求 === 和 ！==
-    eqeqeq: 0,
+    eqeqeq: 'off',
     // 禁止 for 循环出现方向错误的循环，比如 for (i = 0; i < 10; i--)
     'for-direction': 'error',
     // getter 必须有返回值，并且禁止返回空，比如 return;
@@ -70,16 +70,16 @@ module.exports = {
       }
     ],
     // allow async-await
-    'generator-star-spacing': 0,
+    'generator-star-spacing': 'off',
     // 强制执行回调错误处理
-    'handle-callback-err': 0,
+    'handle-callback-err': 'off',
     // 强制执行一致的缩进（缩进）
     // indent: ['error', 2, { SwitchCase: 1 }],
     indent: 'off',
     'no-tabs': 'off',
     quotes: ['error', 'single'],
     // 对象字面量中的属性名是否强制双引号
-    'quote-props': 0,
+    'quote-props': 'off',
     // 禁止将 await 写在循环里，因为这样就无法同时发送多个异步请求了
     // @off 要求太严格了，有时需要在循环中写 await
     'no-await-in-loop': 'off',
@@ -102,7 +102,7 @@ module.exports = {
     // 开启此规则，因为字符串中一般不会出现 Ctrl 键，所以一旦出现了，可能是一个代码错误
     'no-control-regex': 'error',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 'off',
     // 禁止在函数参数中出现重复名称的参数
     'no-dupe-args': 'error',
     // 禁止在对象字面量中出现重复名称的键名
@@ -115,20 +115,20 @@ module.exports = {
       }
     ],
     // 禁止 new 对象（非新）
-    'no-new': 0,
+    'no-new': 'off',
     // 禁止 new Function（非新）
-    'no-new-func': 0,
+    'no-new-func': 'off',
     // 禁止未声明的变量
-    'no-undef': 0,
+    'no-undef': 'off',
     // 禁止不必要的转义用法
-    'no-useless-escape': 0,
-    'no-useless-constructor': 0,
+    'no-useless-escape': 'off',
+    'no-useless-constructor': 'off',
     // 禁止多余的 return 语句
-    'no-useless-return': 0,
+    'no-useless-return': 'off',
     // 禁止在常规字符串中出现模板字面量占位符语法
-    'no-template-curly-in-string': 0,
+    'no-template-curly-in-string': 'off',
     // 禁止在导入中使用Webpack加载器语法
-    'import/no-webpack-loader-syntax': 0,
+    'import/no-webpack-loader-syntax': 'off',
     // 要求import导入排序
     // 'sort-imports': 1,
     'sort-imports': [
@@ -141,18 +141,19 @@ module.exports = {
       }
     ],
     // 要求对象键进行排序
-    'sort-keys': 0,
+    // 'sort-keys': 'off',
     // 在数组括号内强制实现一致的间距
-    'standard/array-bracket-even-spacing': 0,
+    'standard/array-bracket-even-spacing': 'off',
     // callback(true)或callback(false)在ES6里是不被允许的
-    'standard/no-callback-literal': 0,
+    'standard/no-callback-literal': 'off',
+    'no-var': 'warn',
     'no-unused-vars': [
-      0,
+      'warn',
       {
         // 允许声明未使用变量
         vars: 'local',
         // 参数不检查
-        args: 'none'
+        args: 'all'
       }
     ],
     // 语句强制分号结尾
@@ -176,15 +177,15 @@ module.exports = {
       }
     ],
     // 要求块语句以空行开头和结尾
-    'padded-blocks': 0,
-    // 空行最多不能超过100行
+    'padded-blocks': 'off',
+    // 空行最多不能超过 100 行
     'no-multiple-empty-lines': [
       0,
       {
         max: 100
       }
     ],
-    // 关闭禁止混用tab和空格
+    // 关闭禁止混用 tab 和空格
     'no-mixed-spaces-and-tabs': [0]
   }
 };

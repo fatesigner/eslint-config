@@ -6,10 +6,6 @@ module.exports = {
   messages: {},
   types: [
     {
-      value: 'upd',
-      name: 'A new feature.'
-    },
-    {
       value: 'feat',
       name: 'A new feature.'
     },

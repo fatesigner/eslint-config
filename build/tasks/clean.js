@@ -1,6 +1,6 @@
 /**
  * clean
- * 清理 build 目录
+ * clean build dir
  */
 
 const Gulp = require('gulp');
