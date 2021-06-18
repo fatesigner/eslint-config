@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/fatesigner/eslint-config/compare/v2.0.1...v2.0.2) (2021-06-18)
+
+
+### Bug Fixes
+
+* remove vue/recommended ([1242269](https://github.com/fatesigner/eslint-config/commit/124226900ed5f945be12faa485ab74a5b916a49b))
+
 ## [2.0.1](https://github.com/fatesigner/eslint-config/compare/v2.0.0...v2.0.1) (2021-05-25)
 
 
