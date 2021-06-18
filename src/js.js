@@ -147,6 +147,8 @@ module.exports = {
     // callback(true)或callback(false)在ES6里是不被允许的
     'standard/no-callback-literal': 'off',
     'no-var': 'warn',
+    'no-empty': 'off',
+    'no-empty-function': 'off',
     'no-unused-vars': [
       'warn',
       {

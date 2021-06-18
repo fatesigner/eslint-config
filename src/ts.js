@@ -60,6 +60,8 @@ module.exports = {
     '@typescript-eslint/no-this-alias': 'off',
     'no-unused-vars': 'warn',
     'no-var': 'warn',
+    'no-empty': 'off',
+    'no-empty-function': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/triple-slash-reference': ['error', { path: 'always', types: 'never', lib: 'never' }]
   }
