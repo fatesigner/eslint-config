@@ -10,12 +10,7 @@ module.exports = {
     node: true,
     es6: true
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier'
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
   globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
   plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
@@ -58,7 +53,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
     '@typescript-eslint/no-this-alias': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'no-var': 'warn',
     'no-empty': 'off',
     'no-empty-function': 'off',
