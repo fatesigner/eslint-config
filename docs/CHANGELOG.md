@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/fatesigner/eslint-config/compare/v2.0.2...v2.1.0) (2021-07-06)
+
+
+### Features
+
+* update husky version to 7.0 ([b7134ef](https://github.com/fatesigner/eslint-config/commit/b7134ef1f34ba37dd716e0047e222260e8473eb0))
+* update prettier printWidth with 160 ([43e8a68](https://github.com/fatesigner/eslint-config/commit/43e8a6890779798617467194e450040039d3f45c))
+* update ts rules 'no-unused-vars' to 'off' ([720408f](https://github.com/fatesigner/eslint-config/commit/720408f9cc5618cfc6e1c74d922944a5a27694b5))
+
 ## [2.0.2](https://github.com/fatesigner/eslint-config/compare/v2.0.1...v2.0.2) (2021-06-18)
 
 
