@@ -1,9 +1,13 @@
-﻿const eslint = require('./src/js');
+﻿// javascript
+const eslint = require('./src/js');
+
+// typescript
 const tslint = require('./src/ts');
+
+// vue
 const vuelint = require('./src/vue');
 
 module.exports = {
-  // 以当前目录为根目录，不再向上查找 .eslintrc.js
   root: true,
   overrides: [eslint, tslint, vuelint]
 };

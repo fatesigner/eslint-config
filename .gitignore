@@ -17,6 +17,7 @@ coverage.lcov
 
 # compiled output
 /dist
+/static
 /tmp
 /temp
 .tmp
@@ -31,7 +32,8 @@ coverage.lcov
 .stylelintcache
 
 # IDEs and editors
-/.idea
+.idea
+.hbuilderx
 .project
 .classpath
 .c9/
