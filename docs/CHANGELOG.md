@@ -1,3 +1,11 @@
+# [2.2.0](https://github.com/fatesigner/eslint-config/compare/v2.1.0...v2.2.0) (2021-07-29)
+
+
+### Features
+
+* update release flow ([30e56d6](https://github.com/fatesigner/eslint-config/commit/30e56d6ff6b75a5b33b35c54a27e4548d33fe1c5))
+* update sort-imports ([de8e593](https://github.com/fatesigner/eslint-config/commit/de8e5933fdfca5df1087ed476f7c99bbe493362e))
+
 # [2.1.0](https://github.com/fatesigner/eslint-config/compare/v2.0.2...v2.1.0) (2021-07-06)
 
 
