@@ -57,6 +57,15 @@ module.exports = {
     'no-var': 'warn',
     'no-empty': 'off',
     'no-empty-function': 'off',
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple']
+      }
+    ],
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/triple-slash-reference': ['error', { path: 'always', types: 'never', lib: 'never' }]
   }
