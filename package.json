@@ -25,8 +25,6 @@
   "scripts": {
     "clean": "gulp clean --gulpfile build/gulpfile.js",
     "build": "gulp build --gulpfile build/gulpfile.js",
-    "release": "semantic-release",
-    "update": "ncu -u --target minor",
     "prepare": "npx husky install",
     "commit": "npx git-cz",
     "lint": "lint-staged"
