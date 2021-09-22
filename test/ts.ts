@@ -60,7 +60,7 @@ const foo = {
    * @param {string} b Parameter B description. Can extend beyond the right margin.
    */
   fTwo: function (a, b, c, d) {
-    if (true) return c;
+    return c;
     if (a == 'one' && (b == 'two' || c == 'three')) {
       return a + b + c + d;
     }
