@@ -1,23 +1,20 @@
 ﻿# eslint-config
 
-[![build][travis-image]][travis-url]
+[![npm][npm-image]][npm-url]
+[![download][download-image]][download-url]
 [![commitizen][commitizen-image]][commitizen-url]
 [![prettier][prettier-image]][prettier-url]
-[![download][download-image]][download-url]
-[![npm][npm-image]][npm-url]
 [![semantic][semantic-image]][semantic-url]
 
-[npm-image]: https://img.shields.io/npm/v/@fatesigner/eslint-config.svg?color=blue&logo=npm
+[npm-image]: https://img.shields.io/npm/v/@fatesigner/eslint-config.svg?style=for-the-badge&logo=npm
 [npm-url]: https://npmjs.com/package/@fatesigner/eslint-config
-[travis-image]: https://travis-ci.com/fatesigner/eslint-config.svg?color=green&token=i21P7stb8bZPNjZakvsi&branch=master
-[travis-url]: https://travis-ci.com/fatesigner/eslint-config
-[download-image]: https://img.shields.io/npm/dw/@fatesigner/eslint-config.svg?color=yellowgreen
+[download-image]: https://img.shields.io/npm/dw/@fatesigner/eslint-config.svg?style=for-the-badge
 [download-url]: https://npmjs.com/package/@fatesigner/eslint-config
-[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-green.svg
+[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-green.svg?style=for-the-badge
 [commitizen-url]: http://commitizen.github.io/cz-cli/
-[prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?logo=prettier
+[prettier-image]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?logo=prettier&style=for-the-badge
 [prettier-url]: https://github.com/prettier/prettier
-[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=for-the-badge&color=9cf
 [semantic-url]: https://opensource.org/licenses/MIT
 
 eslint插件配置，包含js、ts、vue通用规则
@@ -30,7 +27,7 @@ npm i @fatesigner/eslint-config -D
 
 // install peerDependencies
 npm i eslint prettier -D
-npm i @babel/eslint-parser @babel/core @babel/preset-env @babel/preset-react -D
+npm i @babel/core @babel/eslint-parser @babel/preset-env @babel/preset-react -D
 npm i @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
 ```
 
