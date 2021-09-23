@@ -1,3 +1,11 @@
+# [2.3.0](https://github.com/fatesigner/eslint-config/compare/v2.2.0...v2.3.0) (2021-09-23)
+
+
+### Features
+
+* update package.json and remove travis ([011ee61](https://github.com/fatesigner/eslint-config/commit/011ee6171ecd05b634ebeaaad73a9dd0875b0a7d))
+* update package.json version ([cb87bba](https://github.com/fatesigner/eslint-config/commit/cb87bba907e24ef162b96b29794beaca10fb7140))
+
 # [2.2.0](https://github.com/fatesigner/eslint-config/compare/v2.1.0...v2.2.0) (2021-07-29)
 
 
