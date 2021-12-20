@@ -1,14 +1,19 @@
 <template>
   <div>
     <dl>
-      <dt></dt>
-      <dd style="text-align: center"></dd>
+      <dt v-for="item in 20" :key="item">
+        {{ item }}
+      </dt>
+      <dd style="text-align: center" />
     </dl>
   </div>
 </template>
 
-<script lang="js">
-import Vue from 'vue';
+<script>
+import { Component, Inject, Prop, Provide } from 'vue-property-decorator';
+
+const str = "dasdasd what's insdas";
+const str2 = `dasdasd what's insdas`;
 
 export default {
   data() {

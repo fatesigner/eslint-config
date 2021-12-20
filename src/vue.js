@@ -8,25 +8,27 @@ const tslint = require('./ts');
 module.exports = {
   files: ['**/*.vue'],
   env: eslint.env,
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['standard', 'plugin:vue/vue3-essential'],
+  plugins: ['vue'],
   globals: eslint.globals,
   parser: 'vue-eslint-parser',
-  parserOptions: {
-    sourceType: 'module',
-    allowImportExportEverywhere: false,
-    ecmaVersion: 12,
-    ecmaFeatures: {
-      decoratorsBeforeExport: true,
-      experimentalObjectRestSpread: true,
-      globalReturn: false,
-      legacy: true,
-      legacyDecorators: true,
-      jsx: true,
-      modules: true
+  parserOptions: Object.assign({}, eslint.parserOptions, {
+    vueFeatures: {
+      filter: false
     },
-    parser: '@typescript-eslint/parser'
-  },
-  plugins: ['vue', '@typescript-eslint'],
+    parser: {
+      // Script parser for `<script>`
+      js: eslint.parser,
+      jsx: eslint.parser,
+      // Script parser for `<script lang="ts">`
+      ts: tslint.parser,
+      tsx: tslint.parser,
+      // Script parser for vue directives (e.g. `v-if=` or `:attribute=`)
+      // and vue interpolations (e.g. `{{variable}}`).
+      // If not specified, the parser determined by `<script lang ="...">` is used.
+      '<template>': 'espree'
+    }
+  }),
   rules: {
     ...eslint.rules,
     ...tslint.rules

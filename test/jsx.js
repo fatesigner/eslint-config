@@ -2,6 +2,11 @@
  * jsx
  */
 
+import { Component, Inject, Prop, Provide } from 'vue-property-decorator';
+
+const str = "dasdasd what's insdas";
+const str2 = `dasdasd what's insdas`;
+
 export class Greeter {
   greetNTimes(to, { from, times }) {
     return range(times).map((item) => this.greet(to, from));

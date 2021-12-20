@@ -10,27 +10,37 @@ module.exports = {
     node: true,
     es6: true
   },
-  extends: ['standard', 'prettier'],
+  // 扩展配置文件
+  extends: ['standard', 'prettier', 'plugin:promise/recommended'],
+  plugins: ['prettier', 'promise'],
   globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
-  plugins: ['html', 'standard', 'prettier'],
+  // 指定解析器，默认 Espree
   parser: '@babel/eslint-parser',
   parserOptions: {
-    sourceType: 'module',
     allowImportExportEverywhere: false,
-    ecmaVersion: 12,
+    allowReserved: false,
+    babelOptions: {
+      presets: ['@babel/preset-env', '@babel/preset-react']
+    },
+    // 指定 ECMAScript 版本，默认 5
+    ecmaVersion: 2020,
+    // 指定使用的额外的语言特性，所有选项默认 false
     ecmaFeatures: {
       decoratorsBeforeExport: true,
       experimentalObjectRestSpread: true,
+      // 当 parserOptions.ecmaVersion >= 5 时，是否启用全局 strict mode（严格模式）
+      impliedStrict: true,
+      // 是否允许在全局作用域下使用 return 语句，默认 false
       globalReturn: false,
+      // 启用 JSX
+      jsx: true,
       legacy: true,
       legacyDecorators: true,
-      jsx: true,
       modules: true
     },
     requireConfigFile: false,
-    babelOptions: {
-      presets: ['@babel/preset-env', '@babel/preset-react']
-    }
+    // 指定源码类型是 script (默认) 还是 module 类型（允许使用 imports）
+    sourceType: 'module'
   },
   rules: {
     'prettier/prettier': [
@@ -77,7 +87,8 @@ module.exports = {
     // indent: ['error', 2, { SwitchCase: 1 }],
     indent: 'off',
     'no-tabs': 'off',
-    quotes: ['error', 'single'],
+    quotes: 'off',
+    // quotes: ['error', 'single', { avoidEscape: true }],
     // 对象字面量中的属性名是否强制双引号
     'quote-props': 'off',
     // 禁止将 await 写在循环里，因为这样就无法同时发送多个异步请求了

@@ -2,32 +2,16 @@
  * Eslint for ts、tsx file
  */
 
+const eslint = require('./js');
+
 module.exports = {
   files: ['**/*.ts', '**/*.tsx'],
-  env: {
-    browser: true,
-    commonjs: true,
-    node: true,
-    es6: true
-  },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
-  globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
-  plugins: ['@typescript-eslint'],
+  env: eslint.env,
+  extends: ['standard', 'prettier'],
+  plugins: ['prettier', 'promise', '@typescript-eslint'],
+  globals: eslint.globals,
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    sourceType: 'module',
-    allowImportExportEverywhere: false,
-    ecmaVersion: 12,
-    ecmaFeatures: {
-      decoratorsBeforeExport: true,
-      experimentalObjectRestSpread: true,
-      globalReturn: false,
-      legacy: true,
-      legacyDecorators: true,
-      jsx: true,
-      modules: true
-    }
-  },
+  parserOptions: eslint.parserOptions,
   rules: {
     'prettier/prettier': [
       'error',

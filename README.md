@@ -26,9 +26,12 @@ eslint插件配置，包含js、ts、vue通用规则
 npm i @fatesigner/eslint-config -D
 
 // install peerDependencies
-npm i eslint prettier -D
+npm i eslint eslint-config-standard
+npm i prettier eslint-config-prettier eslint-plugin-prettier -D
 npm i @babel/core @babel/eslint-parser @babel/preset-env @babel/preset-react -D
-npm i @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+npm i @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
+npm i eslint-plugin-html eslint-plugin-import eslint-plugin-node eslint-plugin-promise -D
+npm i eslint-plugin-vue vue-eslint-parser -D
 ```
 
 ## 使用

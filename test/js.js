@@ -2,7 +2,10 @@
  * js
  */
 
-const s = '';
+import { Component, Inject, Prop, Provide } from 'vue-property-decorator';
+
+const str = "dasdasd what's insdas";
+const str2 = `dasdasd what's insdas`;
 
 function buzz() {
   return 0;

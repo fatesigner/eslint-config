@@ -9,22 +9,16 @@
   </div>
 </template>
 
-<script lang="tsx">
+<script lang="jsx">
 import Vue from 'vue';
 import { Component, Inject, Prop, Provide } from 'vue-property-decorator';
-
-interface ITest {
-  das: string;
-  dd: number;
-}
 
 const str = "dasdasd what's insdas";
 const str2 = `dasdasd what's insdas`;
 
-@Component({})
 export default class Jsx extends Vue {
-  ds(d: number) {
-    const s: ITest = {
+  ds(d) {
+    const s = {
       das: '',
       dd: 2
     };
@@ -33,7 +27,7 @@ export default class Jsx extends Vue {
 
   render() {
     const s = this.ds(2);
-    const path: any = '/';
+    const path = '/';
     return (
       <div class='mg-notFound' s='{dd}'>
         <div class='fixed-center text-center'>

@@ -1,5 +1,5 @@
 /**
- * ts
+ * tsx
  */
 
 import { Component, Inject, Prop, Provide } from 'vue-property-decorator';
@@ -11,34 +11,6 @@ interface ITest {
   das: string;
   dd: number;
 }
-
-type AccessibilityLevel =
-  | 'explicit' // require an accessor (including public)
-  | 'no-public' // don't require public
-  | 'off'; // don't check
-
-type Options = {
-  accessibility?: AccessibilityLevel;
-  ignoredMethodNames?: string[];
-  overrides?: {
-    accessors?: AccessibilityLevel;
-    constructors?: AccessibilityLevel;
-    methods?: AccessibilityLevel;
-    properties?: AccessibilityLevel;
-    parameterProperties?: AccessibilityLevel;
-  };
-};
-
-class Animal {
-  private constructor(protected animalName) {}
-  public get name() {
-    return this.animalName;
-  }
-}
-
-const defaultOptions: Options = {
-  accessibility: 'explicit'
-};
 
 function buzz() {
   return 0;
