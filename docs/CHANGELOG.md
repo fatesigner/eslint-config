@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/fatesigner/eslint-config/compare/v2.3.0...v3.0.0) (2021-12-20)
+
+
+### Features
+
+* update config for vue ([bd58dd2](https://github.com/fatesigner/eslint-config/commit/bd58dd28d047b19668077c3e2b788eda0115afe2))
+
+
+### BREAKING CHANGES
+
+* update peerDependencies.
+
 # [2.3.0](https://github.com/fatesigner/eslint-config/compare/v2.2.0...v2.3.0) (2021-09-23)
 
 
