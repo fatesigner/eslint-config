@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/fatesigner/eslint-config/compare/v3.0.0...v3.1.0) (2021-12-24)
+
+
+### Features
+
+* update rules ([459e352](https://github.com/fatesigner/eslint-config/commit/459e352be0ba084da1e990442a1cf4246ce074e4))
+
 # [3.0.0](https://github.com/fatesigner/eslint-config/compare/v2.3.0...v3.0.0) (2021-12-20)
 
 
