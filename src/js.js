@@ -157,6 +157,7 @@ module.exports = {
     'standard/array-bracket-even-spacing': 'off',
     // callback(true)或callback(false)在ES6里是不被允许的
     'standard/no-callback-literal': 'off',
+    'multiline-ternary': 'off',
     'no-var': 'warn',
     'no-empty': 'off',
     'no-empty-function': 'off',

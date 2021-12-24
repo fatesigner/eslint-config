@@ -28,7 +28,7 @@ export default class Jsx extends Vue {
   render() {
     const s = this.ds(2);
     const path = '/';
-    return (
+    return s === '2' ? (
       <div class='mg-notFound' s='{dd}'>
         <div class='fixed-center text-center'>
           <p>img goes here</p>
@@ -40,6 +40,8 @@ export default class Jsx extends Vue {
           </q-btn>
         </div>
       </div>
+    ) : (
+      <div>sds</div>
     );
   }
 }

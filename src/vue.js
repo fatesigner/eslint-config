@@ -31,6 +31,12 @@ module.exports = {
   }),
   rules: {
     ...eslint.rules,
-    ...tslint.rules
+    ...tslint.rules,
+    'vue/no-unused-components': [
+      'warn',
+      {
+        ignoreWhenBindingPresent: true
+      }
+    ]
   }
 };
