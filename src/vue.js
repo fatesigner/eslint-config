@@ -8,7 +8,7 @@ const tslint = require('./ts');
 module.exports = {
   files: ['**/*.vue'],
   env: eslint.env,
-  extends: ['standard', 'plugin:vue/vue3-essential'],
+  extends: ['standard'],
   plugins: ['vue'],
   globals: eslint.globals,
   parser: 'vue-eslint-parser',
@@ -31,12 +31,6 @@ module.exports = {
   }),
   rules: {
     ...eslint.rules,
-    ...tslint.rules,
-    'vue/no-unused-components': [
-      'warn',
-      {
-        ignoreWhenBindingPresent: true
-      }
-    ]
+    ...tslint.rules
   }
 };

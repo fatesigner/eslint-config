@@ -13,15 +13,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: eslint.parserOptions,
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'none',
-        bracketSpacing: true,
-        jsxBracketSameLine: true
-      }
-    ],
+    ...eslint.rules,
     '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/class-name-casing': 'off',
@@ -36,20 +28,8 @@ module.exports = {
     '@typescript-eslint/no-var': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-useless-constructor': 'off',
     '@typescript-eslint/no-this-alias': 'off',
-    'no-unused-vars': 'off',
-    'no-var': 'warn',
-    'no-empty': 'off',
-    'no-empty-function': 'off',
-    'sort-imports': [
-      'error',
-      {
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple']
-      }
-    ],
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/triple-slash-reference': ['error', { path: 'always', types: 'never', lib: 'never' }]
   }

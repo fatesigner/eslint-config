@@ -9,10 +9,10 @@
   </div>
 </template>
 
-<script>
+<script lang="js">
 import { Component, Inject, Prop, Provide } from 'vue-property-decorator';
 
-const str = "dasdasd what's insdas";
+const str = 'dasdasd what\'s insdas';
 const str2 = `dasdasd what's insdas`;
 
 export default {

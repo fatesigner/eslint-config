@@ -7,8 +7,9 @@ module.exports = {
   env: {
     browser: true,
     commonjs: true,
-    node: true,
-    es6: true
+    es6: true,
+    jest: true,
+    node: true
   },
   // 扩展配置文件
   extends: ['standard', 'prettier', 'plugin:promise/recommended'],
@@ -194,12 +195,12 @@ module.exports = {
     'padded-blocks': 'off',
     // 空行最多不能超过 100 行
     'no-multiple-empty-lines': [
-      0,
+      'warn',
       {
         max: 100
       }
     ],
     // 关闭禁止混用 tab 和空格
-    'no-mixed-spaces-and-tabs': [0]
+    'no-mixed-spaces-and-tabs': 'off'
   }
 };

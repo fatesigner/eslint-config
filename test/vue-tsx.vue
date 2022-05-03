@@ -1,9 +1,7 @@
 <template>
   <div>
     <dl>
-      <dt v-for="item in 20" :key="item">
-        {{ item }}
-      </dt>
+      <dt v-for="item in 20"></dt>
       <dd style="text-align: center"></dd>
     </dl>
   </div>
@@ -11,7 +9,7 @@
 
 <script lang="tsx">
 import Vue from 'vue';
-import { Component, Inject, Prop, Provide } from 'vue-property-decorator';
+import { Component } from 'vue-property-decorator';
 
 interface ITest {
   das: string;
@@ -31,10 +29,10 @@ export default class Jsx extends Vue {
     return '';
   }
 
-  getEl() {
+  render() {
     const s = this.ds(2);
-    const path = '/';
-    return s === '2' ? (
+    const path: any = '/';
+    return (
       <div class='mg-notFound' s='{dd}'>
         <div class='fixed-center text-center'>
           <p>img goes here</p>
@@ -46,8 +44,6 @@ export default class Jsx extends Vue {
           </q-btn>
         </div>
       </div>
-    ) : (
-      <div>sds</div>
     );
   }
 }

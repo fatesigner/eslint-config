@@ -1,7 +1,7 @@
 <template>
   <div>
     <dl>
-      <dt v-for="item in 20" :key="item"></dt>
+      <dt v-for="item in 20"></dt>
       <dd style="text-align: center"></dd>
     </dl>
   </div>
